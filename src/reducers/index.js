@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import ShowsReducer from './reducer_shows';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  shows: ShowsReducer
 });
 
 export default rootReducer;
