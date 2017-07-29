@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { fetchTVShows } from '../actions/index';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {fetchTVShows} from '../actions/index';
 
-class SearchBar extends Component{
-  constructor(props){
+class SearchBar extends Component {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -15,11 +15,11 @@ class SearchBar extends Component{
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
-  onInputChange(event){
+  onInputChange(event) {
     this.setState({term: event.target.value});
   }
 
-  onFormSubmit(event){
+  onFormSubmit(event) {
     event.preventDefault();
 
     // Fetch tv shows data
@@ -27,24 +27,34 @@ class SearchBar extends Component{
     this.setState({term: ''});
   }
 
-  render(){
-    return(
-      <form onSubmit={this.onFormSubmit} className="input input-group">
-        <input
-          placeholder=""
-          className="form-control"
-          value={this.state.term}
-          onChange={this.onInputChange} />
-        <span className="form-control">
-          <button type="submit" className="btn btn-secondary">Search</button>
-        </span>
-      </form>
+  render() {
+    return (
+      <div>
+        <h2 className="v-center">Welcome to the TV Maze Application</h2>
+        <p className="lead">Search for any TV show by name</p>
+        <div className="row">
+          <div className="col-md-12">
+            <form onSubmit={this.onFormSubmit} className="input-group">
+              <input
+                value={this.state.term}
+                onChange={this.onInputChange}
+                className="form-control"/>
+              <span className="input-group-btn">
+                <button type="submit" className="btn btn-warning">Search</button>
+              </span>
+
+            </form>
+          </div>
+        </div>
+      </div>
     );
   }
 }
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({ fetchTVShows }, dispatch);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    fetchTVShows
+  }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(SearchBar);

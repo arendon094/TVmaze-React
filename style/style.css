@@ -1,3 +1,15 @@
 .input{
   margin: 20px 0px;
 }
+
+.show-preview{
+  margin: 10px;
+  border: none;
+  background: #EFEFEF;
+}
+
+.show-image{
+  height: 40%;
+  margin-left: -15px;
+  float: left;
+}

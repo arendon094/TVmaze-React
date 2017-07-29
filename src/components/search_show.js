@@ -5,9 +5,11 @@ import ShowsList from '../containers/shows_list';
 export default class SearchShow extends Component{
   render(){
     return(
-      <div>
-        <SearchBar />
-        <ShowsList />
+      <div className="search-header">
+        <div className="container">
+          <SearchBar />
+          <ShowsList />
+        </div>
       </div>
     );
   }
