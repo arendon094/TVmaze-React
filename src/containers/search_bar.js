@@ -29,7 +29,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="title">
         <h2 className="v-center">Welcome to the TV Maze Application</h2>
         <p className="lead">Search for any TV show by name</p>
         <div className="row">
