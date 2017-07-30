@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import images from '../images/index';
+import { Link } from 'react-router-dom';
 // import notAvailable from '../images/not-available.png';
 
 class ShowsList extends Component{
@@ -22,6 +23,9 @@ class ShowsList extends Component{
             <div dangerouslySetInnerHTML={{
                 __html: summary
             }}/>
+            <Link
+              to={`/tvshow/${tvShow.show.id}`}
+              className="btn btn-info details-btn">Details</Link>
           </div>
         </div>
       );

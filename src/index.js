@@ -7,6 +7,7 @@ import promise from 'redux-promise';
 
 import reducers from './reducers';
 import SearchShow from './components/search_show';
+import ShowDetails from './containers/show-details';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -15,6 +16,7 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
+          <Route path="/tvshow/:id" component={ShowDetails} />
           <Route path="/" component={SearchShow} />
         </Switch>
       </div>
