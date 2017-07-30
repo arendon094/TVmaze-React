@@ -1,13 +1,14 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import images from '../images/index';
 // import notAvailable from '../images/not-available.png';
 
 class ShowsList extends Component{
   renderShows(){
     return _.map(this.props.shows, tvShow => {
       const summary = (!tvShow.show.summary) ? 'No details available.' : tvShow.show.summary;
-      const image = (!tvShow.show.image) ? 'http://biorem.org/wp-content/uploads/2016/07/not-available.png' : tvShow.show.image.medium;
+      const image = (!tvShow.show.image) ? images.no_show : tvShow.show.image.medium;
 
       return(
         <div className="row show-preview" key={tvShow.show.id}>
