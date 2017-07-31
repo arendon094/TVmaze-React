@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const FETCH_TVSHOWS = 'FETCH_TVSHOWS';
-export const FETCH_TVSHOW = 'FETCH_TVSHOW'
+export const FETCH_SHOW = 'FETCH_SHOW';
 
 const ROOT_URL = 'http://api.tvmaze.com';
 
@@ -19,7 +19,7 @@ export function fetchTVShow(id){
   const request = axios.get(`${ROOT_URL}/shows/${id}?embed=cast`);
 
   return{
-    type: FETCH_TVSHOW,
+    type: FETCH_SHOW,
     payload: request
   };
 }
