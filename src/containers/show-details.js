@@ -12,7 +12,7 @@ class ShowDetails extends Component{
   render(){
     const { tvShow } = this.props;
 
-    if(!tvShow){
+    if(!tvShow || !tvShow._embedded){
       return <div>Loading...</div>
     }
 
