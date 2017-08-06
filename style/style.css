@@ -1,3 +1,9 @@
+.body{
+  /*background-color: #00AA72;*/
+  background-color: #006D4F;
+  color: white;
+}
+
 .input{
   margin: 20px 0px;
 }
@@ -10,6 +16,7 @@
   margin: 10px;
   border: none;
   background: #EFEFEF;
+  color: black;
 }
 
 .show-image{
