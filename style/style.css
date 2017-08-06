@@ -21,3 +21,21 @@
 .details-btn{
   float: right;
 }
+
+.summary-style{
+  margin-left: -100px;
+}
+
+.details-image{
+  height: 50%;
+  float: left;
+}
+
+.display-right{
+  float: right;
+}
+
+.character-image{
+  height: 200px;
+  float: left;
+}
